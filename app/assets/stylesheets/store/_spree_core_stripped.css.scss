@@ -1,7 +1,7 @@
-$c_base: #8dba53;
-$c_gray1: #8dba53;
-$c_colored: #8dba53;
-$c_border: #8dba53;
+$c_base:    $linkColor; //#8dba53;
+$c_gray1:   $linkColor; //#8dba53;
+$c_colored: $linkColor; //#8dba53;
+$c_border:  $linkColor; //#8dba53;
 
 /*--------------------------------------*/
 /* Checkout
@@ -167,7 +167,8 @@ $c_border: #8dba53;
 
 p[data-hook="use_billing"] {
   float: right;
-  margin-top: -38px;
+  //margin-top: -38px;
+  margin-bottom: 10px;
   background-color: white;
   padding: 5px;
 }
@@ -216,36 +217,43 @@ div[data-hook="inside_cart_form"] {
 }
 
 #empty-cart {
-  margin-top: 15px;
-  float: right;
+  margin-top: 6px;
+  float: left;
 }
 
 /*--------------------------------------*/
 /* Account
 /*--------------------------------------*/
+
 #existing-customer, #new-customer, #forgot-password {
+  @extend .well;
+  input.button {
+    @extend .btn-success;
+  }
+  form {
+    @extend .form-inline;
+  }
   h6 {
     text-transform: uppercase;
     color: $c_colored;
   }
+  text-align: left;
 }
+
 
 #registration {
   h6 {
     text-transform: uppercase;
     color: $c_colored;
   }
-
-  #existing-customer {
-    width: auto;
-    text-align: left;
-  }
 }
 
+
 #user-info {
-  margin-bottom: 15px;
-  border: 1px solid $c_border;
-  padding: 10px;
+  @extend .well;
+  //margin-bottom: 15px;
+  //border: 1px solid $c_border;
+  //padding: 10px;
 }
 
 /*--------------------------------------*/
@@ -266,7 +274,7 @@ table.order-summary {
   tbody {
     tr {
       td {
-        width: 10%;
+        //width: 10%;
         text-align: center;
 
         &:first-child {

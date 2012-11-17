@@ -1,0 +1,8 @@
+<ul id="nav-bar" class="nav" data-hook>
+  <%= nav_link t(:home), root_path, { :id => 'home-link' } %>
+  <%= nav_link t(:products), products_path, { :id => 'products-link' } %>
+  <li id="search-bar"><%= form_tag products_url, :method => :get, :class => 'navbar-form' do %>
+      <input type="search" id="s1" class="search-query" name="keywords" placeholder="Search">
+    <% end %>
+  </li>
+</ul>

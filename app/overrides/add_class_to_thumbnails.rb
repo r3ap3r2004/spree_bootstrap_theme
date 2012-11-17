@@ -1,5 +1,5 @@
 Deface::Override.new(:virtual_path => %q{spree/products/_thumbnails},
-                    :name => %q{replace_thumbnails},
-                    :disabled => true,
+                    :name => %q{add_class_to_thumbnails},
+                    :disabled => false,
                     :add_to_attributes => %q{li},
-                    :attributes => {:class => 'span1'})
+                    :attributes => {:class => 'thumbnail'})

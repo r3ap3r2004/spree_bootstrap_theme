@@ -11,12 +11,12 @@ header {
     border: 0px;
 
     img {
-      height: 25px;
+
+      //height: 100px;
       width: 80px;
       border: 0px;
     }
   }
-
   nav {
     display: inline-block;
     ul {
@@ -36,25 +36,152 @@ header {
 }
 // END BOOTSTRIP
 
-
+#search-bar {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#nav-bar {
+  margin-top: 10px;
+}
+#homeCarousel {
+  div.carousel-caption {
+    position: static;
+  }
+  div.item {
+    text-align: center;
+  }
+  a {
+    img {
+      margin: 0 auto;
+    }
+  }
+}
 nav li{
   list-style-type: none;
 }
 
+#sidebar_products_search {
+  @extend .form-inline;
+  div {
+    ul {
+        list-style-type: none;
+    }
+  }
+  input[type="button"] {
+    @extend btn-primary;
+  }
+}
 // Pad content wrapper to position below bootstrip header
 //#wrapper {
 //  padding: 20px;
 //}
 
-.product-listing {
-  @extend .thumbnails;
-}
+
 
 .product-image {
   a {
   @extend .thumbnail;
   }
 }
+
+.product-listing {
+  @extend .thumbnails;
+  li {
+    height: 150px;
+    width: 150px;
+    margin-left: 10px !important;
+  }
+  @media (max-width: 767px) {
+    li {
+      margin-left: 0 !important;
+    }
+  }
+}
+
+.pagination {
+  text-align: center;
+}
+
+#clear_cart_link {
+  a {
+    @extend .btn-info;
+  }
+  input {
+    @extend .btn-danger;
+  }
+}
+
+#checkout_form_registration {
+  @extend .form-inline;
+}
+#product-thumbnails {
+  li.thumbnail {
+    float: left;
+  }
+}
+
+.user-edit-form, div[data-hook="signup_inside_form"] {
+  p {
+    input.button {
+      @extend .btn-success;
+      @extend .btn-large;
+    }
+  }
+}
+
+div.add-to-cart {
+ button {
+   @extend .btn-success;
+ }
+}
+#checkout_form_address, #checkout_form_delivery, #checkout_form_payment, #checkout_form_confirm {
+  div.form-buttons {
+    input.primary {
+      @extend .btn-success;
+      @extend .pull-right;
+      margin: 10px;
+    }
+  }
+}
+
+#order {
+  div.steps-data {
+    @extend .well;
+  }
+  p {
+    a.button {
+      @extend .btn-success;
+    }
+  }
+}
+#checkout-link {
+ @extend .btn-success;
+}
+
+#payment-methods {
+  @extend .unstyled;
+}
+form .required {
+    font-weight: bold;
+}
+span.required{
+    color: #f00;
+}
+#product-variants {
+  ul {
+    list-style-type: none;
+    li {
+      padding: 5px;
+      label {
+        display: inline;
+        //line-height: 30px;
+        margin-top: 5px;
+        padding: 5px;
+      }
+    }
+  }
+}
+
 // Home
 #myCarousel {
   margin: 0 auto;
@@ -111,3 +238,9 @@ nav li{
     @extend form-inline;
   }
 }
+/*
+.product-listing [class*="span"]:first-child {
+  margin-left: 2.12766%;
+  *margin-left: 2.07447%;
+}
+*/
